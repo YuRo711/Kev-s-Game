@@ -24,7 +24,8 @@ public class PlayerControls : MonoBehaviour
 
         _rotationX = Math.Clamp(_rotationX - mouseY, -45f, 45f);
         
-        cameraTransform.Rotate(Vector3.up * mouseX);
+        transform.Rotate(Vector3.up * mouseX);
+        cameraTransform.localRotation = Quaternion.Euler(_rotationX, mouseX, 0);
     }
 
     #endregion
