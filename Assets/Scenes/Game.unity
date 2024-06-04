@@ -738,6 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951232508}
   - component: {fileID: 951232510}
+  - component: {fileID: 951232511}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -754,7 +755,7 @@ Transform:
   m_GameObject: {fileID: 951232507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.413, z: -5.28}
+  m_LocalPosition: {x: 0, y: 0.456, z: -5.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -782,11 +783,25 @@ CharacterController:
   serializedVersion: 3
   m_Height: 0.5
   m_Radius: 0.1
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_SlopeLimit: 0.01
+  m_StepOffset: 0.05
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &951232511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951232507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c15eb7c7fc94406baf3a580f91ce675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterController: {fileID: 951232510}
+  speed: 10
 --- !u!64 &1003670437
 MeshCollider:
   m_ObjectHideFlags: 0
