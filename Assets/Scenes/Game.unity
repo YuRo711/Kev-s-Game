@@ -801,7 +801,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 951232510}
-  speed: 10
+  speed: 5
+  gravity: -9.8
 --- !u!64 &1003670437
 MeshCollider:
   m_ObjectHideFlags: 0
