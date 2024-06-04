@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PlayerControls : MonoBehaviour
+public class CameraRotation : MonoBehaviour
 {
     #region Fields
 
     [SerializeField] private float mouseSensitivity = 100f;
-    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Transform playerTransform;
 
     private float _rotationX;
 
@@ -24,8 +24,8 @@ public class PlayerControls : MonoBehaviour
 
         _rotationX = Math.Clamp(_rotationX - mouseY, -45f, 45f);
         
-        transform.Rotate(Vector3.up * mouseX);
-        cameraTransform.localRotation = Quaternion.Euler(_rotationX, mouseX, 0);
+        playerTransform.Rotate(Vector3.up * mouseX);
+        transform.localRotation = Quaternion.Euler(_rotationX, mouseX, 0);
     }
 
     #endregion
